@@ -457,10 +457,14 @@ img {
   color: #fff;
   border: none;
   display: flex;
-  gap: 16px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #404bbf;
 }
 .form-icon {
   fill: #fff;
@@ -556,6 +560,7 @@ img {
   outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 38px;
+  font-size: 12px;
 }
 .modal-input:focus {
   border-color: #4d5ae5;
@@ -632,6 +637,9 @@ img {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+}
+.modal-check:focus + .check-text span {
+  border-color: #4d5ae5;
 }
 .check-link {
   line-height: 1.33333;
