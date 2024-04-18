@@ -286,14 +286,14 @@ img {
   margin-bottom: 72px;
 }
 .portfolio-products {
+  min-width: 288px;
   display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .portfolio-products-list {
-  width: calc((100% - 48px) / 3);
+  height: 400px;
   background: #fff;
   position: relative;
   overflow: hidden;
@@ -348,8 +348,9 @@ img {
 /*--------------- Footer-------------*/
 .footer-board {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  min-width: 320px;
 }
 .logo-footer {
   display: inline-block;
@@ -361,6 +362,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-end {
   line-height: 1.5;
@@ -378,20 +380,20 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-list {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 72px;
 }
 .footer-list-text {
   display: flex;
   flex-direction: column;
-  margin-right: 120px;
 }
 .footer-list-social {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
 }
 
 .footer-icon-list {
@@ -428,15 +430,18 @@ img {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .footer-input {
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
@@ -453,7 +458,7 @@ img {
 .footer-btn {
   border-radius: 4px;
   padding: 8px 24px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   background-color: #4d5ae5;
   font-weight: 500;
@@ -678,6 +683,7 @@ img {
 .modal-btn:focus {
   background-color: #404bbf;
 }
+/* ADAPTIVE table*/
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -711,21 +717,63 @@ img {
   .advantages-list-title {
     width: calc((100% - 72px) / 2);
   }
+  .team-container {
+    max-width: 584px;
+  }
   .team-list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 64px;
   }
-  .team-list-element {
-    width: calc((100% - 64px) / 2);
-  }
   .team-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .portfolio-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .portfolio-products-list {
+    width: calc((100% - 72px) / 2);
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .logo-footer {
+    text-align: left;
+  }
+  .footer-name-social {
+    text-align: left;
+  }
+  .footer-list-text {
+    min-width: 264px;
+    min-height: 112px;
+  }
+  .footer-list-social {
+    min-width: 208px;
+    min-height: 80px;
+  }
+  .footer-form-text {
+    text-align: left;
+  }
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .footer-input {
+    width: 264px;
+  }
 }
+/* ADAPTIVE desctop*/
 @media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
@@ -780,7 +828,41 @@ img {
   }
   .team-list-element {
     width: calc((100% - 3 * 24px) / 4);
+  }
+  .portfolio-products {
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+  .portfolio-products-list {
+    width: calc((100% - 48px) / 3);
+  }
+  .footer-board {
+    background-color: #2e2f42;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .footer-list {
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-list-text {
+    margin-right: 120px;
+  }
+  .footer-name-social {
+    margin-bottom: 16px;
+  }
+  .footer-list-social {
+    margin-right: auto;
+  }
+  .footer-form {
+    display: flex;
+    gap: 24px;
+  }
+  .footer-input {
     width: 264px;
-    height: 428px;
+  }
+  .footer-btn {
+    min-width: 165px;
   }
 }
