@@ -32,29 +32,177 @@
     />
     <title>WebStudio</title>
   </head>
+
   <body>
-    <!-- <header class="header-boarder">
+    <header class="header-boarder">
       <div class="container header-container">
         <nav class="header-navigation">
-          <a class="logo" href="/">Web<span class="logo-header">Studio</span></a>
+          <a class="logo" href="/"
+            >Web<span class="logo-header"
+              >Studio</span
+            ></a
+          >
           <ul class="menu-navigation">
-            <li><a class="menu current" href="./index.html">Studio</a></li>
-            <li><a class="menu" href="">Portfolio</a></li>
-            <li><a class="menu" href="">Contacts</a></li>
+            <li>
+              <a
+                class="menu current"
+                href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a class="menu" href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a class="menu" href="#contacts"
+                >Contacts</a
+              >
+            </li>
           </ul>
         </nav>
         <address class="contacts">
           <ul class="menu-contacts">
             <li>
-              <a class="contacts-title" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a
+                class="contacts-title"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
             </li>
             <li>
-              <a class="contacts-title" href="tel:+110001111111">+11 (000) 111-11-11</a>
+              <a
+                class="contacts-title"
+                href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
             </li>
           </ul>
         </address>
+        <button
+          class="open-menu-btn"
+          type="button"
+          data-menu-open
+        >
+          <svg width="24" height="24">
+            <use
+              href="./images/icons.svg#icon-burger"
+            ></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mobile-menu" data-menu>
+        <button
+          type="button"
+          class="mobile-close-btn"
+          data-menu-close
+        >
+          <svg
+            class="mobile-btn-icon"
+            width="8"
+            height="8"
+          >
+            <use
+              href="./images/icons.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu-list">
+          <li class="mobile-menu-item">
+            <a
+              href="./index.html"
+              class="mobile-menu-link current"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="#portfolio"
+              class="mobile-menu-link"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="#contacts"
+              class="mobile-menu-link"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu-contacts">
+          <li>
+            <a
+              class="mobile-contacts-link current"
+              href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a
+              class="mobile-contacts-link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-icon-list">
+          <li class="mobile-icon-item">
+            <a href="" class="mobile-icon-link">
+              <svg
+                class="mobile-icon-soc"
+                width="24"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-instagram"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-icon-item">
+            <a href="" class="mobile-icon-link">
+              <svg
+                class="mobile-icon-soc"
+                width="24"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-twitter"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-icon-item">
+            <a href="" class="mobile-icon-link">
+              <svg
+                class="mobile-icon-soc"
+                width="24"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-facebook"
+                ></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-icon-item">
+            <a href="" class="mobile-icon-link">
+              <svg
+                class="mobile-icon-soc"
+                width="24"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-linkedin"
+                ></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
     <main>
       <section class="section board">
         <div class="container">
@@ -64,6 +212,7 @@
           <button
             class="board-button"
             type="button"
+            data-modal-open
           >
             Order Service
           </button>
@@ -497,15 +646,41 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="products">Our Portfolio</h2>
+          <h2 id="portfolio" class="products">
+            Our Portfolio
+          </h2>
           <ul class="portfolio-products">
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img-5.jpg"
-                  alt="Banking App"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/bank-mob-1x-min.jpg 1x,
+                      ./images/d6/bank-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/bank-tab-1x-min.jpg 1x,
+                      ./images/d6/bank-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/bank-desc-1x-min.jpg 1x,
+                      ./images/d6/bank-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img-5.jpg"
+                    alt="Banking App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -525,11 +700,36 @@
             </li>
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img-4.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/cash-mob-1x-min.jpg 1x,
+                      ./images/d6/cash-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/cash-tab-1x-min.jpg 1x,
+                      ./images/d6/cash-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/cash-desc-1x-min.jpg 1x,
+                      ./images/d6/cash-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img-4.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -549,11 +749,36 @@
             </li>
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img-3.jpg"
-                  alt="Meditation App"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/medit-mob-1x-min.jpg 1x,
+                      ./images/d6/medit-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/medit-tab-1x-min.jpg 1x,
+                      ./images/d6/medit-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/medit-desc-1x-min.jpg 1x,
+                      ./images/d6/medit-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img-3.jpg"
+                    alt="Meditation App"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -573,11 +798,35 @@
             </li>
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img-2.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/taxi-mob-1x-min.jpg 1x,
+                      ./images/d6/taxi-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/taxi-tab-1x-min.jpg 1x,
+                      ./images/d6/taxi-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/taxi-desc-1x-min.jpg 1x,
+                      ./images/d6/taxi-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img-2.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -597,11 +846,35 @@
             </li>
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img-1.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/screen-mob-1x-min.jpg 1x,
+                      ./images/d6/screen-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/screen-tab-1x-min.jpg 1x,
+                      ./images/d6/screen-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/screen-desc-1x-min.jpg 1x,
+                      ./images/d6/screen-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img-1.jpg"
+                    alt="Screen Illustrations"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -621,11 +894,35 @@
             </li>
             <li class="portfolio-products-list">
               <div class="port-overlay">
-                <img
-                  src="./images/d2/img.jpg"
-                  alt="Online Courses"
-                  width="360"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/d6/online-mob-1x-min.jpg 1x,
+                      ./images/d6/online-mob-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 768px) and (max-width: 1157px)"
+                    srcset="
+                      ./images/d6/online-tab-1x-min.jpg 1x,
+                      ./images/d6/online-tab-2x-min.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/d6/online-desc-1x-min.jpg 1x,
+                      ./images/d6/online-desc-2x-min.jpg 2x
+                    "
+                  />
+                  <img
+                    src="./images/d2/img.jpg"
+                    alt="Online Courses"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <p class="board-overlay">
                   14 Stylish and User-Friendly App
                   Design Concepts · Task Manager
@@ -647,7 +944,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer-board">
+    <footer id="contacts" class="footer-board">
       <div class="container footer-list">
         <div class="footer-list-text">
           <a class="logo-footer" href="/"
@@ -751,44 +1048,106 @@
         </div>
       </div>
     </footer>
-    <!-- <div class="backdrop">
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" class="modal-open-btn">
-          <svg class="modal-btn-icon" width="8" height="8">
-            <use href="./images/icons.svg#icon-close"></use>
+        <button
+          type="button"
+          class="modal-close-btn"
+          data-modal-close
+        >
+          <svg
+            class="modal-btn-icon"
+            width="8"
+            height="8"
+          >
+            <use
+              href="./images/icons.svg#icon-close"
+            ></use>
           </svg>
         </button>
-        <p class="modal-title">Leave your contacts and we will call you back</p>
+        <p class="modal-title">
+          Leave your contacts and we will call you
+          back
+        </p>
         <form class="modal-form">
           <div class="modal-field">
-            <label for="user-name" class="modal-label">Name</label>
+            <label
+              for="user-name"
+              class="modal-label"
+              >Name</label
+            >
             <div class="model-input-wrap">
-              <input type="text" class="modal-input" name="user-name" id="user-name" />
-              <svg class="modal-field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person"></use>
+              <input
+                type="text"
+                class="modal-input"
+                name="user-name"
+                id="user-name"
+              />
+              <svg
+                class="modal-field-icon"
+                width="18"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-person"
+                ></use>
               </svg>
             </div>
           </div>
           <div class="modal-field">
-            <label for="user-phone" class="modal-label">Phone</label>
+            <label
+              for="user-phone"
+              class="modal-label"
+              >Phone</label
+            >
             <div class="model-input-wrap">
-              <input type="tel" class="modal-input" name="user-phone" id="user-phone" />
-              <svg class="modal-field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone"></use>
+              <input
+                type="tel"
+                class="modal-input"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg
+                class="modal-field-icon"
+                width="18"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-phone"
+                ></use>
               </svg>
             </div>
           </div>
           <div class="modal-field">
-            <label for="user-email" class="modal-label">Email</label>
+            <label
+              for="user-email"
+              class="modal-label"
+              >Email</label
+            >
             <div class="model-input-wrap">
-              <input type="email" class="modal-input" name="user-email" id="user-email" />
-              <svg class="modal-field-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email"></use>
+              <input
+                type="email"
+                class="modal-input"
+                name="user-email"
+                id="user-email"
+              />
+              <svg
+                class="modal-field-icon"
+                width="18"
+                height="24"
+              >
+                <use
+                  href="./images/icons.svg#icon-email"
+                ></use>
               </svg>
             </div>
           </div>
           <div class="modal-texarea">
-            <label for="user-comment" class="modal-label">Comment</label>
+            <label
+              for="user-comment"
+              class="modal-label"
+              >Comment</label
+            >
             <textarea
               name="user-comment"
               id="user-comment"
@@ -804,18 +1163,103 @@
               class="modal-check visually-hidden"
               value="true"
             />
-            <label for="user-privacy" class="check-text"
+            <label
+              for="user-privacy"
+              class="check-text"
               ><span class="check-span"
-                ><svg class="check-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-Vector"></use></svg
+                ><svg
+                  class="check-icon"
+                  width="10"
+                  height="8"
+                >
+                  <use
+                    href="./images/icons.svg#icon-Vector"
+                  ></use></svg
               ></span>
-              I accept the terms and conditions of the
-              <a class="check-link" href="">Privacy Policy</a></label
-            >
+              <span
+                >I accept the terms and conditions
+                of the
+                <a class="check-link" href=""
+                  >Privacy Policy</a
+                ></span
+              >
+            </label>
           </div>
-          <button class="modal-btn" type="button">Send</button>
+          <button class="modal-btn" type="button">
+            Send
+          </button>
         </form>
       </div>
-    </div> -->
+    </div>
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelectorAll(
+            "[data-menu-open]"
+          ),
+          closeMenuBtn: document.querySelectorAll(
+            "[data-menu-close]"
+          ),
+          menu: document.querySelector(
+            "[data-menu]"
+          ),
+        };
+
+        refs.openMenuBtn.forEach((element) => {
+          element.addEventListener(
+            "click",
+            toggleMenu
+          );
+        });
+        refs.closeMenuBtn.forEach((element) => {
+          element.addEventListener(
+            "click",
+            toggleMenu
+          );
+        });
+
+        function toggleMenu() {
+          refs.menu.classList.toggle("is-open");
+          document.body.classList.toggle(
+            "no scroll"
+          );
+        }
+      })();
+    </script>
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelectorAll(
+            "[data-modal-open]"
+          ),
+          closeMenuBtn: document.querySelectorAll(
+            "[data-modal-close]"
+          ),
+          menu: document.querySelector(
+            "[data-modal]"
+          ),
+        };
+
+        refs.openMenuBtn.forEach((element) => {
+          element.addEventListener(
+            "click",
+            toggleMenu
+          );
+        });
+        refs.closeMenuBtn.forEach((element) => {
+          element.addEventListener(
+            "click",
+            toggleMenu
+          );
+        });
+
+        function toggleMenu() {
+          refs.menu.classList.toggle("is-open");
+          document.body.classList.toggle(
+            "no scroll"
+          );
+        }
+      })();
+    </script>
   </body>
 </html>
