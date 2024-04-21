@@ -30,6 +30,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section {
@@ -139,7 +141,7 @@ img {
   text-align: center;
   text-transform: capitalize;
   max-width: 216px;
-  margin: 72px 52px;
+  margin: 0 auto 72px;
 }
 
 .board-button {
@@ -185,8 +187,8 @@ img {
 }
 
 .advantages-list {
-  min-width: 288px;
-  min-height: 696px;
+  display: flex;
+  flex-direction: column;
   gap: 72px;
 }
 
@@ -233,6 +235,9 @@ img {
 }
 
 .team-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 72px;
 }
 
@@ -242,6 +247,7 @@ img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+  width: 264px;
 }
 
 .team-profile {
@@ -314,19 +320,22 @@ img {
 }
 
 .portfolio-products {
-  min-width: 288px;
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
 
 .portfolio-products-list {
-  height: 400px;
   background: #fff;
   position: relative;
   overflow: hidden;
   transition: box-shadow 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-products-list:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .port-overlay {
@@ -703,8 +712,6 @@ img {
 
 .modal-checkbox {
   border-radius: 4px;
-  width: 360px;
-  height: 16px;
   margin-top: 16px;
   margin-bottom: 24px;
   flex-shrink: 0;
@@ -999,7 +1006,7 @@ img {
     font-size: 56px;
     line-height: 1.07;
     max-width: 496px;
-    margin: 112px 136px 36px 136px;
+    margin: 0 auto 36px auto;
   }
   .advantages {
     text-align: start;
@@ -1007,6 +1014,7 @@ img {
   .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     column-gap: 72px;
     row-gap: 24px;
     min-width: 736px;
@@ -1025,6 +1033,7 @@ img {
   .team-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     column-gap: 24px;
     row-gap: 64px;
   }
@@ -1041,7 +1050,7 @@ img {
     row-gap: 72px;
   }
   .portfolio-products-list {
-    width: calc((100% - 72px) / 2);
+    width: calc((100% - 24px) / 2);
   }
   .footer-list {
     display: flex;
@@ -1049,6 +1058,7 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
+    padding: 0 108px;
   }
   .logo-footer {
     text-align: left;
